@@ -224,6 +224,7 @@ reset_cmake_options
 add_cmake_options "${DEFAULT_CMAKE_OPTIONS[@]}" -DCMAKE_ASM_FLAGS="$MCPELAUNCHER_CFLAGS $CFLAGS" -DCMAKE_C_FLAGS="$MCPELAUNCHER_CFLAGS $CFLAGS" -DCMAKE_CXX_FLAGS="$MCPELAUNCHER_CXXFLAGS $MCPELAUNCHER_CFLAGS $CXXFLAGS $CFLAGS"
 add_cmake_options -DCMAKE_INSTALL_PREFIX=/usr -DMSA_DAEMON_PATH=. -DXAL_WEBVIEW_QT_PATH=. -DENABLE_QT_ERROR_UI=OFF
 add_cmake_options "${EXTRA_CMAKE_FLAGS[@]}"
+add_cmake_options -DLAUNCHER_ENABLE_GOOGLE_PLAY_LICENCE_CHECK=OFF
 call_quirk build_mcpelauncher
 build_component64 mcpelauncher
 install_component mcpelauncher
